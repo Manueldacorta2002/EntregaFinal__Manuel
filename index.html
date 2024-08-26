@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Pago de Cuotas</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simulador de Pago de Cuotas</h1>
+
+      <div class="form-group">
+        <label for="loanAmount">Monto del préstamo (USD):</label>
+        <input type="number" id="loanAmount" placeholder="Ingrese el monto" />
+      </div>
+      <div class="form-group">
+        <label for="interestRate">Tasa de interés anual (%):</label>
+        <input type="number" id="interestRate" placeholder="Ingrese la tasa" />
+      </div>
+      <div class="form-group">
+        <label for="loanTerm">Plazo del préstamo (años):</label>
+        <input type="number" id="loanTerm" placeholder="Ingrese el plazo" />
+      </div>
+
+      <div class="action-buttons">
+        <button id="calculateBtn">Calcular Pago Mensual</button>
+        <button id="resetBtn">Reiniciar</button>
+        <button id="viewMoreBtn" style="display: none">Ver Más</button>
+      </div>
+
+      <div class="result" id="result"></div>
+      <canvas id="amortizationChart" width="400" height="200"></canvas>
+      <div class="result" id="history"></div>
+
+      <div id="confirmDialog" style="display: none">
+        <p>¿Está seguro que desea reiniciar?</p>
+        <button id="confirmYes">Sí</button>
+        <button id="confirmNo">No</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
